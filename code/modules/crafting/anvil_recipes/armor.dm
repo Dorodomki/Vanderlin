@@ -268,7 +268,7 @@
 
 /datum/anvil_recipe/armor/iron/skullcap
 	name = "x2 Skullcap"
-	recipe_name = "a skullcap"
+	recipe_name = "Two skullcaps"
 	created_item = /obj/item/clothing/head/helmet/skullcap
 	createditem_extra = 1
 
