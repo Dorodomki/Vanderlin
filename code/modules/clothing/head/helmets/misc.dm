@@ -3,6 +3,7 @@
 	desc = "A steel nasal helmet, usually worn by the guards of any respectable fief."
 	icon_state = "nasal"
 	sellprice = VALUE_STEEL_SMALL_ITEM
+	smeltresult = /obj/item/fertilizer/ash
 	melting_material = /datum/material/steel
 	melt_amount = 75
 
@@ -17,6 +18,7 @@
 	desc = "A humble iron helmet. The most standard and antiquated protection for one's head from harm."
 	icon_state = "skullcap"
 	sellprice = VALUE_CHEAP_IRON_HELMET
+	smeltresult = /obj/item/fertilizer/ash
 	melting_material = /datum/material/iron
 	melt_amount = 75
 
@@ -88,6 +90,7 @@
 	flags_inv = HIDEEARS
 	sellprice = VALUE_CHEAP_STEEL_HELMET
 	max_integrity = INTEGRITY_STANDARD
+	smeltresult = /obj/item/fertilizer/ash
 	melting_material = /datum/material/steel
 	melt_amount = 75
 
