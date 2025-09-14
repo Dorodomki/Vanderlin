@@ -580,7 +580,7 @@
 
 /datum/anvil_recipe/armor/steel/helmetkettle
 	name = "x2 Kettle Helmet"
-	recipe_name = "a Kettle Helmet"
+	recipe_name = "Two kettle helmets"
 	created_item = /obj/item/clothing/head/helmet/kettle
 	createditem_extra = 1
 
