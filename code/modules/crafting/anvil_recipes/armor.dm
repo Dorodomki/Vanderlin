@@ -568,7 +568,7 @@
 // STEEL HELMETS
 /datum/anvil_recipe/armor/steel/nasal_helmet
 	name = "x2 Nasal helmet"
-	recipe_name = "a Nasal helmet"
+	recipe_name = "Two nasal helmets"
 	created_item = /obj/item/clothing/head/helmet/nasal
 	craftdiff = 1
 	createditem_extra = 1
