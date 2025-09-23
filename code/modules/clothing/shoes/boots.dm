@@ -70,6 +70,20 @@
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STANDARD
 
+/obj/item/clothing/shoes/boots/armor/blkknight
+	name = "blacksteel boots"
+	desc = "Boots forged from blacksteel, light yet strong, perfect for a fearless stride."
+	icon_state = "bkboots"
+	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
+	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
+	anvilrepair = /datum/skill/craft/blacksmithing
+	smeltresult = /obj/item/ingot/blacksteel
+	armor_class = AC_MEDIUM
+	armor = ARMOR_PLATE_GOOD
+	item_weight = 7 * BLACKSTEEL_MULTIPLIER
+	sellprice = VALUE_SILVER_ITEM * 2
+
 /obj/item/clothing/shoes/boots/leather
 	name = "leather boots"
 	//dropshrink = 0.75
@@ -114,6 +128,7 @@
 	salvage_result = /obj/item/natural/fur
 	salvage_amount = 1
 	item_weight = 3
+	min_cold_protection_temperature = -20
 
 /obj/item/clothing/shoes/boots/furlinedanklets
 	name = "fur lined anklets"
@@ -126,6 +141,7 @@
 	is_barefoot = TRUE
 	salvage_amount = 1
 	salvage_result = /obj/item/natural/fur
+	min_cold_protection_temperature = -20
 
 /obj/item/clothing/shoes/boots/clothlinedanklets
 	name = "cloth lined anklets"
@@ -180,3 +196,15 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // See above comment
+
+/obj/item/clothing/shoes/boots/leather/advanced/watch
+	name = "watch boots"
+	color = "#d5c2aa"
+	desc = "These boots are reinforced with iron padding, designed not just for protection but for presence, announcing the approach of the city watch long before they're seen."
+	gender = PLURAL
+	icon_state = "nobleboots"
+	item_state = "nobleboots"
+
+/obj/item/clothing/shoes/boots/leather/advanced/watch/Initialize()
+	. = ..()
+	AddComponent(/datum/component/squeak, custom_sounds = list(SFX_WATCH_BOOT_STEP))
