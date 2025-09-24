@@ -55,10 +55,11 @@
 
 // IRON ARMOR
 /datum/anvil_recipe/armor/iron/splint
-	name = "Splint Armor (+ cured leather)"
+	name = "Two splint Armors (+2 cured leather)"
 	recipe_name = "durable light armor"
-	additional_items = list(/obj/item/natural/hide/cured)
+	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/armor/leather/splint
+	createditem_extra = 1
 
 /datum/anvil_recipe/armor/iron/splintpants
 	name = "two splint trousers  (+3 cured leather)" //two items per bar since is mostly leather + iron bits, ideal for cheaper armors
