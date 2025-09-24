@@ -451,6 +451,7 @@
 /obj/item/clothing/head/helmet/kettle/slit/atarms
 	name = "royal slitted kettle"
 	desc = "A lightweight steel helmet decorated for the royal men at arms, wear this piece with pride, triumph for your lord."
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 	icon_state = "atarmslit"
 	flags_cover = HEADCOVERSEYES
 	body_parts_covered = HEAD|HAIR|EARS|EYES
