@@ -164,6 +164,12 @@
 	recipe_name = "a pair of Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/plate/iron
 
+/datum/anvil_recipe/armor/iron/ijackchain
+	name = "2x Iron Jack Chains"
+	recipe_name = "two pairs of Jack Chains"
+	created_item = /obj/item/clothing/wrists/bracers/ironjackchain
+	createditem_extra = 1
+
 /datum/anvil_recipe/armor/iron/ibracers
 	name = "Iron Plate Vambraces"
 	recipe_name = "a pair of Plate Vambraces"

@@ -428,9 +428,10 @@
 	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_HIP
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_ARMOR_UNUSUAL
-	item_weight = 6 * STEEL_MULTIPLIER
+	item_weight = 6 * IRON_MULTIPLIER
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY
+	CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/helmet/sargebarbute
 	name = "elegant barbute"
@@ -447,6 +448,7 @@
 	item_weight = 6 * STEEL_MULTIPLIER
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY
+	CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/helmet/kettle/slit/atarms
 	name = "royal slitted kettle"
@@ -457,6 +459,7 @@
 	body_parts_covered = HEAD|HAIR|EARS|EYES
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY
+	CRAFTING_TEST_EXCLUDE
 
 //................. Zizo Barbute .............. //
 
