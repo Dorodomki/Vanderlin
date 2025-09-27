@@ -43,8 +43,8 @@
 	armor = ARMOR_MAILLE
 	max_integrity = INTEGRITY_STANDARD
 	prevent_crits = CUT_AND_MINOR_CRITS
-	smeltresult = /obj/item/fertilizer/ash//we avoid melting one piece for one bar
-	melting_material = /datum/material/iron// we get one bar per two pieces of the item recovered and smelted
+	smeltresult = /obj/item/fertilizer/ash //we avoid melting one piece for one bar
+	melting_material = /datum/material/iron // we get one bar per two pieces of the item recovered and smelted
 	melt_amount = 75
 
 /obj/item/clothing/wrists/bracers/leather
