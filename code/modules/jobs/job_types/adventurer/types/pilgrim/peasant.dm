@@ -36,7 +36,7 @@
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	armor = /obj/item/clothing/armor/gambeson/light/striped
 	beltl = /obj/item/weapon/sickle
-	beltr = /obj/item/weapon/flail/towner //the peasant is a walking workshop at this point but this flail is their key to portable threshing without sacrifice the pitchfork or hoe
+	beltr = /obj/item/weapon/flail/towner // the peasant is a walking workshop at this point but this flail is their key to portable threshing without sacrifice the pitchfork or hoe
 	var/obj/item/weapon/pitchfork/P = new()
 	H.put_in_hands(P, forced = TRUE)
 	if(H.gender == FEMALE)
