@@ -8,7 +8,7 @@
 
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Hunter Apprentice"
-	cmode_music = 'sound/music/cmode/towner/CombatBeggar.ogg'//pilgrims aren't towners, this fits them more for a combat on the woods
+	cmode_music = 'sound/music/cmode/towner/CombatBeggar.ogg' // pilgrims aren't towners, this fits them more for a combat on the woods
 
 /datum/outfit/job/adventurer/hunter/pre_equip(mob/living/carbon/human/H)
 	..()
