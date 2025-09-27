@@ -51,7 +51,7 @@
 		/obj/item/storage/keyring/guard,
 	)
 
-//Bandit's belt starts with a bandage and a key to their guildhall.
+// Bandit's belt starts with a bandage and a key to their guildhall.
 /obj/item/storage/belt/leather/mercenary
 	populate_contents = list(
 		/obj/item/natural/cloth,
