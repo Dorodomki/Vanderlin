@@ -450,7 +450,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
-/obj/item/clothing/head/helmet/kettle/slit/atarms
+/obj/item/clothing/head/helmet/atarms
 	name = "royal slitted kettle"
 	desc = "A lightweight steel helmet decorated for the royal men at arms, wear this piece with pride, triumph for your lord."
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
