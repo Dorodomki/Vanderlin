@@ -30,8 +30,8 @@
 			H.change_stat(STATKEY_CON, 2)
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/pants/tights/colored/random
-		shirt =  pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
-		shoes = pick (/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
+		shirt =  pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
+		shoes = pick(/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
 		neck = /obj/item/storage/belt/pouch/coins/poor
 		head = /obj/item/clothing/head/fisherhat
 		armor = /obj/item/clothing/armor/gambeson/light/striped

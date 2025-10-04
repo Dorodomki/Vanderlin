@@ -11,10 +11,10 @@
 
 /datum/outfit/adventurer/miner/pre_equip(mob/living/carbon/human/H)
 	..()
-	head =  pick (/obj/item/clothing/head/armingcap, /obj/item/clothing/head/headband/colored/red, /obj/item/clothing/head/roguehood/colored/random)
+	head =  pick(/obj/item/clothing/head/armingcap, /obj/item/clothing/head/headband/colored/red, /obj/item/clothing/head/roguehood/colored/random)
 	pants = /obj/item/clothing/pants/trou
 	armor = /obj/item/clothing/armor/gambeson/light/striped
-	shirt = pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
+	shirt = pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
 	shoes = /obj/item/clothing/shoes/boots/leather
 	belt = /obj/item/storage/belt/leather
 	neck = /obj/item/storage/belt/pouch/coins/poor

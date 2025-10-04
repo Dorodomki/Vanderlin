@@ -26,10 +26,10 @@
 	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 
 	belt = /obj/item/storage/belt/leather/rope
-	shirt = pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
+	shirt = pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
 	pants = /obj/item/clothing/pants/trou
-	head = pick (/obj/item/clothing/head/strawhat, /obj/item/clothing/head/armingcap, /obj/item/clothing/head/headband/colored/red, /obj/item/clothing/head/roguehood/colored/random)
-	shoes = pick (/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
+	head = pick(/obj/item/clothing/head/strawhat, /obj/item/clothing/head/armingcap, /obj/item/clothing/head/headband/colored/red, /obj/item/clothing/head/roguehood/colored/random)
+	shoes = pick(/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	backr = /obj/item/weapon/hoe
 	backl = /obj/item/storage/backpack/satchel

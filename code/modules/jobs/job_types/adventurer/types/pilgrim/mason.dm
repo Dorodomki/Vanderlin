@@ -31,7 +31,7 @@
 	cloak = /obj/item/clothing/cloak/apron/waist/colored/brown
 	neck = /obj/item/storage/belt/pouch/coins/mid
 	pants = /obj/item/clothing/pants/trou
-	shirt = pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/tunic/colored/random)
+	shirt = pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/tunic/colored/random)
 	shoes = /obj/item/clothing/shoes/boots/leather
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/weapon/hammer

@@ -13,8 +13,8 @@
 /datum/outfit/adventurer/hunter/pre_equip(mob/living/carbon/human/H)
 	..()
 	pants = /obj/item/clothing/pants/tights/colored/random
-	shirt =  pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
-	shoes = pick (/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
+	shirt =  pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/shortshirt/colored/random)
+	shoes = pick(/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	head = pick (/obj/item/clothing/head/brimmed, /obj/item/clothing/head/papakha, /obj/item/clothing/head/hatfur, /obj/item/clothing/head/headband/colored/red)
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/brown

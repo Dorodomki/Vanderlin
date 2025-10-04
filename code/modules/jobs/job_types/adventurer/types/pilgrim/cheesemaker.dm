@@ -33,7 +33,7 @@
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 	cloak = /obj/item/clothing/cloak/apron
-	shoes = pick (/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
+	shoes = pick(/obj/item/clothing/shoes/simpleshoes, /obj/item/clothing/shoes/boots/leather)
 	backl = /obj/item/storage/backpack/backpack
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	wrists = /obj/item/clothing/wrists/bracers/leather

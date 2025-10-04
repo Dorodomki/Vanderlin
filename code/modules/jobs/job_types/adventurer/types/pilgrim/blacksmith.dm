@@ -59,7 +59,7 @@
 
 	if(H.gender == MALE)
 		shoes = /obj/item/clothing/shoes/boots/leather
-		shirt = pick (/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/tunic/colored/random)
+		shirt = pick(/obj/item/clothing/shirt/undershirt/colored/random, /obj/item/clothing/shirt/tunic/colored/random)
 	else
 		armor = /obj/item/clothing/shirt/dress/gen/colored/random
 		shoes = /obj/item/clothing/shoes/shortboots
