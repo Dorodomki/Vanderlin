@@ -103,7 +103,7 @@
 	desc = "A metal mask resembling a spider's face. Such a visage haunts many an older dark elf's nitemares - while the younger generation simply scoffs at such relics."
 	icon_state = "shadowfacemask"
 	smeltresult = null// the mask is made out of silk and cloth, turns out it was giving "free" iron
-	melting_material = /obj/item/fertilizer/ash
+	melting_material = null
 
 /obj/item/clothing/face/shepherd
 	name = "halfmask"
