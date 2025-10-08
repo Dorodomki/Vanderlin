@@ -102,7 +102,7 @@
 	name = "anthraxi war mask"
 	desc = "A metal mask resembling a spider's face. Such a visage haunts many an older dark elf's nitemares - while the younger generation simply scoffs at such relics."
 	icon_state = "shadowfacemask"
-	smeltresult = /obj/item/fertilizer/ash // the mask is made out of silk and cloth, turns out it was giving "free" iron
+	smeltresult = null// the mask is made out of silk and cloth, turns out it was giving "free" iron
 	melting_material = /obj/item/fertilizer/ash
 
 /obj/item/clothing/face/shepherd
