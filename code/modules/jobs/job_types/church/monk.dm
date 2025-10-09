@@ -128,9 +128,9 @@
 			cloak = /obj/item/clothing/cloak/stabard/templar/ravox
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 			H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
-			H.adjust_skillrank(/datum/skill/combat/swords, pick (1,3), TRUE)
-			H.adjust_skillrank(/datum/skill/combat/whipsflails, pick (1,3), TRUE)
-			H.adjust_skillrank(/datum/skill/combat/axesmaces, pick (0,1), TRUE)
+			H.adjust_skillrank(/datum/skill/combat/swords, pick(1,3), TRUE)
+			H.adjust_skillrank(/datum/skill/combat/whipsflails, pick(1,3), TRUE)
+			H.adjust_skillrank(/datum/skill/combat/axesmaces, pick(0,1), TRUE)
 		if(/datum/patron/divine/xylix)
 			head = /obj/item/clothing/head/roguehood/colored/random
 			neck = /obj/item/clothing/neck/psycross/silver/xylix
