@@ -36,7 +36,6 @@
 /obj/item/clothing/shirt/robe/colored/purple
 	color = CLOTHING_PLUM_PURPLE
 
-
 //................ Temple Robes ............... //
 
 /obj/item/clothing/shirt/robe/pestra
