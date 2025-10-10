@@ -135,8 +135,7 @@
 			head = /obj/item/clothing/head/roguehood/colored/random
 			neck = /obj/item/clothing/neck/psycross/silver/xylix
 			shoes = /obj/item/clothing/shoes/boots
-			armor = /obj/item/clothing/shirt/robe/colored/plain
-			cloak = /obj/item/clothing/cloak/stabard/templar/xylix
+			armor = /obj/item/clothing/shirt/robe/colored/purple
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 			H.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/music, 3, TRUE)
@@ -144,8 +143,7 @@
 			head = /obj/item/clothing/head/headband/colored/red
 			neck = /obj/item/clothing/neck/psycross/silver/malum
 			shoes = /obj/item/clothing/shoes/boots
-			armor = /obj/item/clothing/shirt/robe/colored/plain
-			cloak = /obj/item/clothing/cloak/stabard/templar/malum
+			armor = /obj/item/clothing/shirt/robe/colored/red
 			backpack_contents += /obj/item/weapon/hammer/iron
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 			H.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
