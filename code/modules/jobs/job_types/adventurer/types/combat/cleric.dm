@@ -25,6 +25,7 @@
 	neck = pick(/obj/item/clothing/neck/chaincoif/iron, /obj/item/clothing/neck/gorget, /obj/item/clothing/neck/highcollier/iron, /obj/item/clothing/neck/coif/cloth, /obj/item/clothing/neck/coif)
 	belt = /obj/item/storage/belt/leather/adventurer
 	backl = pick(/obj/item/storage/backpack/satchel, /obj/item/storage/backpack/satchel/cloth)
+	r_hand = /obj/item/flashlight/flare/torch/prelit // they get back their missing torches
 	//I assume they were given something for the journey by another parish, or the one they departed from
 	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/reagent_containers/food/snacks/hardtack = 1)
 
@@ -117,26 +118,26 @@
 	switch(weapon_choice)
 		if("shield & sword")
 			to_chat(H, span_warning("Your holy weapon is the noble sword, since then find a proper blade has became a hard task."))
-			r_hand = pick(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/scimitar/messer, /obj/item/weapon/sword/sabre/scythe, /obj/item/weapon/sword/iron)
-			l_hand = pick (/obj/item/weapon/shield/heater, /obj/item/weapon/shield)
+			beltr = pick(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/scimitar/messer, /obj/item/weapon/sword/sabre/scythe, /obj/item/weapon/sword/iron)
+			l_hand = pick (/obj/item/weapon/shield/heater, /obj/item/weapon/shield/wood)
 			H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("shield & bludgeon")
 			to_chat(H, span_warning("Your holy weapons are crude bludgeons made to smash the enemy, followed by your shield to show your faith to the face of your adversary."))
-			r_hand = pick(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/warhammer, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)
+			beltr = pick(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/warhammer, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)
 			if(H.dna?.species)
 				if(iself(H) || ishalfelf(H))
-					r_hand = /obj/item/weapon/mace/elvenclub// i don't wanna end up in someone oc being unable to get his quirky mace so the elfs get a pickup exclusive to their clubs, everyone else random gear
-			l_hand = pick (/obj/item/weapon/shield/heater, /obj/item/weapon/shield)
+					beltr = /obj/item/weapon/mace/elvenclub// i don't wanna end up in someone oc being unable to get his quirky mace so the elfs get a pickup exclusive to their clubs, everyone else random gear
+			l_hand = pick (/obj/item/weapon/shield/heater, /obj/item/weapon/shield/wood)
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("Flagellant")
 			to_chat(H, span_warning("Your holy weapons are the punishment instruments, with them you can spread your holy word from close and far."))
-			r_hand = /obj/item/weapon/whip/chain
+			beltr = /obj/item/weapon/whip/chain
 			l_hand = /obj/item/weapon/whip/chain
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
@@ -144,15 +145,15 @@
 			ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 		if("Piker")
 			to_chat(H, span_warning("your holy weapon of choice was the spear, it pierces your enemies from afar while it keeps you and your companions safe ."))
-			r_hand = /obj/item/weapon/spear
-			l_hand = /obj/item/weapon/shield/tower/buckleriron
+			beltr = /obj/item/weapon/shield/tower/buckleriron
+			l_hand = /obj/item/weapon/spear
 			H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("Fanatic")
 			to_chat(H, span_warning("Your weapon isn't holy, is a reinforced field tool, your true weapon is the faith you employ to destroy your adversary."))
-			r_hand = /obj/item/weapon/flail/peasant
+			l_hand = /obj/item/weapon/flail/peasant
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)

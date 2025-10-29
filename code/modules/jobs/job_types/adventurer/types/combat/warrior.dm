@@ -34,6 +34,7 @@
 	neck = pick(/obj/item/clothing/neck/chaincoif/iron, /obj/item/clothing/neck/gorget, /obj/item/clothing/neck/highcollier/iron, /obj/item/clothing/neck/coif/cloth, /obj/item/clothing/neck/coif)
 	head = pick(/obj/item/clothing/head/helmet/skullcap, /obj/item/clothing/head/helmet/ironpot, /obj/item/clothing/head/helmet/sallet/iron, /obj/item/clothing/head/helmet/leather/headscarf)
 	shirt = pick(/obj/item/clothing/armor/gambeson, /obj/item/clothing/armor/gambeson/light)
+	r_hand = /obj/item/flashlight/flare/torch/prelit // they get back their missing torches
 	if(H.age == AGE_OLD)// old warriors get inmunity to see gibs
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 
@@ -48,13 +49,14 @@
 	H.change_stat(STATKEY_INT, -1) // Muscle brains
 
 	H.adjust_blindness(-3)
+
 	var/weapons = list("shield & sword","Dualist axes", "Piker", "shield & bludgeon","Goedendag")
 	var/weapon_choice = input("CHOOSE YOUR WEAPON!!!", "ROGVE UP!!!") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("shield & sword") // defensive adventurer = 1 skilled weapon + 2 rolls for average-skilled and 1 secured average (emergency daggers)
 			to_chat(H, span_warning("You are a career swordsman, your time spent in battles and training allowed you to triumph with skill and power, always behind your shield for any upcoming arrow."))
-			r_hand = pick(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/scimitar/messer, /obj/item/weapon/sword/sabre/scythe, /obj/item/weapon/sword/iron)
+			beltl = pick(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/scimitar/messer, /obj/item/weapon/sword/sabre/scythe, /obj/item/weapon/sword/iron)
 			l_hand = /obj/item/weapon/shield/heater
 			H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
@@ -62,7 +64,7 @@
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("shield & bludgeon") // defensive adventurer = 1 skilled weapon + 2 rolls for average-skilled and 1 secured average (emergency daggers)
 			to_chat(H, span_warning("You are a career warrior who specialized in maces, your time spent in battles and training allowed you to triumph with well landed hits on anyone, always behind your shield for any upcoming arrow."))
-			r_hand = pick(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/warhammer, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)
+			beltl = pick(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/warhammer, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)
 			l_hand = /obj/item/weapon/shield/heater
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
@@ -70,7 +72,7 @@
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("Dualist axes") // offensive adventurer = 1 skilled weapon + 2 rolls for average-skilled and 1 secured average (emergency daggers)
 			to_chat(H, span_warning("You are a career warrior who always was different, why a shield when you can use two weapons? you are quite skilled with using two weapons to tear your enemies apart."))
-			r_hand = /obj/item/weapon/axe/iron
+			beltl = /obj/item/weapon/axe/iron
 			l_hand = /obj/item/weapon/axe/iron
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
@@ -78,16 +80,16 @@
 			ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 		if("Piker") // defensive adventurer = 1 skilled weapon + 2 rolls for average-skilled and 1 secured average (emergency daggers)
 			to_chat(H, span_warning("You are a career warrior, simple and effective for any kind of fight your spear and buckler are the terror of anyone and you know why."))
-			r_hand = /obj/item/weapon/spear
-			l_hand = /obj/item/weapon/shield/tower/buckleriron
+			beltl = /obj/item/weapon/shield/tower/buckleriron
+			l_hand = /obj/item/weapon/spear
 			H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("Goedendag") // offensive adventurer = 1 skilled weapon + 2 rolls for average-skilled and 1 secured average (emergency daggers)
 			to_chat(H, span_warning("You are a career warrior, brutal and powerful your heavy weapon destroys anyone despite being armored or not."))
-			r_hand = /obj/item/weapon/mace/goden
-			l_hand = /obj/item/weapon/shield/tower/buckleriron
+			l_hand = /obj/item/weapon/mace/goden
+			beltl = /obj/item/weapon/shield/tower/buckleriron
 			H.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
