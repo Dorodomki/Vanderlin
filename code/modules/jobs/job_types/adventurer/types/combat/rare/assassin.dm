@@ -161,7 +161,7 @@
 				H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE) //Female nobles get the male noble's bow, but are less trained than an Assassin disguising as a Hunter. Balance.
 				H.adjust_skillrank(/datum/skill/combat/crossbows, -1, TRUE)
 				shirt = /obj/item/clothing/shirt/dress/silkdress/colored/random
-				head = /obj/item/clothing/head/hatfur
+				head = /obj/item/clothing/head/fancyhat
 				cloak = /obj/item/clothing/cloak/raincloak/furcloak
 				backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 				beltr = /obj/item/weapon/knife/dagger/steel/special
@@ -253,6 +253,7 @@
 			shirt = /obj/item/clothing/shirt/undershirt/colored/uncolored
 			belt = /obj/item/storage/belt/leather/assassin
 			beltl = /obj/item/storage/belt/pouch/coins/poor
+			backl = /obj/item/storage/backpack/satchel
 			if(H.gender == MALE)
 				armor = /obj/item/clothing/armor/leather/vest/colored/black
 			else
@@ -280,7 +281,7 @@
 				belt_pick = pick(belt_options)
 			switch(belt_pick)
 				if("Leather Belt")
-					belt = /obj/item/storage/belt/leather/assassin
+					belt = /obj/item/storage/belt/leather
 				if("Toss Blade Belt")
 					belt = /obj/item/storage/belt/leather/knifebelt/black/steel
 

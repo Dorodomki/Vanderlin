@@ -7,8 +7,8 @@
 	var/title_override = null
 	/// The title of this job given to female mobs. Fluff, not as important as [var/title].
 	var/f_title = null
-	/// For the outlaw icon generation.
-	var/parent_job_title
+	/// Used if the job gets switched later to something else.
+	var/datum/job/parent_job
 	/// When joining the round, this text will be shown to the player.
 	var/tutorial = null
 
@@ -28,6 +28,12 @@
 
 	/// How many players currently have this job
 	var/current_positions = 0
+
+	///How many slots were open in this round. Used to prevent slots locking with decreasing amount of alive players
+	var/total_positions_so_far = 0
+
+	///If the roles will scale depending on the amount of players, example : adventurer, only for jobs that are not in the FACTION_TOWN
+	var/scales = FALSE
 
 	/// Whether this job clears a slot when you get a rename prompt.
 	var/antag_job = FALSE
@@ -209,6 +215,9 @@
 		for(var/X in GLOB.youngfolk_positions)
 			peopleiknow += X
 			peopleknowme += X
+		for(var/X in GLOB.inquisition_positions)
+			peopleiknow += X
+			peopleknowme += X
 
 /datum/job/proc/special_job_check(mob/dead/new_player/player)
 	return TRUE
@@ -265,7 +274,7 @@
 		if(islist(amount_or_list))
 			spawned.clamped_adjust_skillrank(skill, amount_or_list[1], amount_or_list[2], TRUE)
 		else
-			spawned.adjust_skillrank(skill, amount_or_list, TRUE)
+			spawned.clamped_adjust_skillrank(skill, amount_or_list, amount_or_list, TRUE) //! This was changed because what the fuck.
 
 	for(var/X in peopleknowme)
 		for(var/datum/mind/MF in get_minds(X))
@@ -287,21 +296,24 @@
 		if(noble_income)
 			SStreasury.noble_incomes[spawned] = noble_income
 
-	if(job_flags & JOB_SHOW_IN_CREDITS)
-		SScrediticons.processing += spawned
-
 	if(cmode_music)
 		DIRECT_OUTPUT(spawned, load_resource(cmode_music, -1)) //preload their combat mode music
 		spawned.cmode_music = cmode_music
 
-	if(!(type in actors_list_blacklist)) //don't show these.
+	var/type_check
+	if(parent_job)
+		type_check = parent_job.type
+		used_title = parent_job.get_informed_title(spawned)
+	else
+		type_check = type
+	if(!(type_check in actors_list_blacklist)) //don't show these.
 		GLOB.actors_list[spawned.mobid] = "[spawned.real_name] as [used_title]<BR>"
 
 	if(forced_flaw)
 		spawned.set_flaw(forced_flaw)
 
 	if(spawned.charflaw)
-		spawned.charflaw.after_spawn(spawned)
+		spawned.charflaw.after_spawn(spawned, player_client)
 
 	if(antag_role && spawned.mind)
 		spawned.mind.add_antag_datum(antag_role)
@@ -323,6 +335,9 @@
 
 	if(length(advclass_cat_rolls))
 		spawned.hugboxify_for_class_selection()
+
+	if(job_flags & JOB_SHOW_IN_CREDITS)
+		SScrediticons.processing += spawned
 
 /datum/job/proc/adjust_patron(mob/living/carbon/human/spawned)
 	if(!length(allowed_patrons))
@@ -479,6 +494,9 @@
 	equipped_human.remove_spells(source = src)
 
 /datum/job/proc/get_informed_title(mob/mob)
+	if(mob.admin_title)
+		return mob.admin_title
+
 	if(title_override)
 		return title_override
 
@@ -486,3 +504,9 @@
 		return f_title
 
 	return title
+
+/datum/job/proc/set_spawn_and_total_positions(count)
+	return spawn_positions
+
+/datum/job/proc/get_total_positions(latejoin)
+	return latejoin ? total_positions : spawn_positions

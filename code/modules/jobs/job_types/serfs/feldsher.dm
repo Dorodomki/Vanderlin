@@ -12,6 +12,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	min_pq = 2
+	bypass_lastclass = TRUE
 
 	trainable_skills = list(/datum/skill/misc/medicine)
 	max_apprentices = 2
@@ -76,3 +77,4 @@
 	wrists = /obj/item/storage/keyring/clinic
 	beltl = /obj/item/storage/fancy/ifak
 	beltr = /obj/item/storage/belt/pouch
+	ring = /obj/item/clothing/ring/feldsher_ring
