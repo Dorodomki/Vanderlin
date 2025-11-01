@@ -38,7 +38,7 @@
 		shirt = /obj/item/clothing/shirt/undershirt/colored/green
 		armor = /obj/item/clothing/armor/gambeson/arming
 		cloak = /obj/item/clothing/cloak/half
-		head = pick (/obj/item/clothing/head/fancyhat, /obj/item/clothing/head/chaperon)
+		head = pick(/obj/item/clothing/head/fancyhat, /obj/item/clothing/head/chaperon)
 
 	//For how we decide what kind of merchant they are.
 	var/merchtype = pickweight(list("FOOD" = 4, "HEAL" = 2, "SILK" = 1, "GEMS" = 1))
