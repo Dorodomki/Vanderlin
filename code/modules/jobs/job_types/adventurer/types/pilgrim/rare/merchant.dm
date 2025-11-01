@@ -31,7 +31,7 @@
 	ring = /obj/item/clothing/ring/silver
 	if(H.gender == FEMALE)
 		armor = /obj/item/clothing/armor/gambeson/heavy/dress
-		head = pick (/obj/item/clothing/head/fancyhat, /obj/item/clothing/head/chaperon)
+		head = pick(/obj/item/clothing/head/fancyhat, /obj/item/clothing/head/chaperon)
 		cloak = /obj/item/clothing/cloak/raincloak/colored/purple
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/pants/tights/colored/green
